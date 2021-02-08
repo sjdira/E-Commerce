@@ -269,11 +269,11 @@
                                     <thead>
                                         <tr align="center" valign="center" >
                                             <th class="border-top-0">ID</th>
-                                            <th class="border-top-0">Nom</th>
+                                            <th class="border-top-0">Name</th>
                                             <th class="border-top-0">Description</th>
-                                            <th class="border-top-0">Photo</th>
-                                            <th class="border-top-0">Supprimer</th>
-                                            <th class="border-top-0">Modifier</th>
+                                            <th class="border-top-0">Picture</th>
+                                            <th class="border-top-0">Delete</th>
+                                            <th class="border-top-0">Update</th>
                                         </tr>
                                     </thead>
                                     <tbody align="center" valign="center">

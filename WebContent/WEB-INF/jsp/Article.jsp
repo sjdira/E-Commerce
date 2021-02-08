@@ -345,19 +345,18 @@
                                     <thead>
                                         <tr align="center" valign="center" >
                                             <th class="border-top-0">ID</th>
-                                            <th class="border-top-0">designation</th>
-                                            <th class="border-top-0">prix</th>
-                                            <th class="border-top-0">quantite</th>
-                                            <th class="border-top-0">tva</th>
-                                            <th class="border-top-0">description</th>
-                                            <th class="border-top-0">photo</th>
-                                            <th class="border-top-0">solde</th>
-                                            <th class="border-top-0">dispo</th>
-                                            <th class="border-top-0">taille</th>
-                                            <th class="border-top-0">couleur</th>
-                                            <th class="border-top-0">categorie</th>
-                                            <th class="border-top-0">Supprimer</th>
-                                            <th class="border-top-0">Modifier</th>
+                                            <th class="border-top-0">Designation</th>
+                                            <th class="border-top-0">Price</th>
+                                            <th class="border-top-0">Quantity</th>
+                                            <th class="border-top-0">TVA</th>
+                                            <th class="border-top-0">Description</th>
+                                            <th class="border-top-0">Picture</th>
+                                            <th class="border-top-0">Sales</th>
+                                            <th class="border-top-0">Available</th>
+                                            <th class="border-top-0">Size</th>
+                                            <th class="border-top-0">Color</th>
+                                            <th class="border-top-0">Delete</th>
+                                            <th class="border-top-0">Update</th>
                                         </tr>
                                     </thead>
                                     <tbody align="center" valign="center">
@@ -369,7 +368,7 @@
   <td>${article.getQuantite()}</td>
   <td>${article.getTva()}</td>
   <td>${article.getDescription()}</td>
-  <td><img src="getPhotoA?idArticle=${article.getIdArticle()}"></td>
+  <td><img src="getPhotoA?idArticle=${article.getIdArticle()}" width="100%"></td>
   <td>${article.getSolde()}</td>
   <td>${article.getDispo()}</td>
   <td>${article.getTaille()}</td>

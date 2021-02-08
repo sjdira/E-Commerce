@@ -47,10 +47,11 @@ public class CategoriesController {
 	@Autowired
 	private IMiter im;
 	
-	@RequestMapping("/test")
-	public String test()
+	@RequestMapping("/")
+	public String index2(Model model)
 	{
-		return "test2";
+		model.addAttribute("ListNVArticle", im.ListNVArticles());
+		return "index";
 	}
 	
 	@RequestMapping("/dashboard")
@@ -65,7 +66,6 @@ public class CategoriesController {
 	{
 		return "cart";
 	}
-	
 	
 	
 	@RequestMapping("/order-complete")
@@ -156,6 +156,8 @@ public class CategoriesController {
 		model.addAttribute("Article", im.GetArticle(idArticle));
 		return "product-detail";
 	}
+	
+	
 	
 	@RequestMapping("/index")
 	public String test(Model model)

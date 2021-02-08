@@ -5,12 +5,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 import DAO.IDAO;
 import Entity.Article;
 import Entity.Categorie;
 import Entity.Client;
-import Entity.Commande;
+
 @Repository
 public class ImpImetier implements IMiter {
 	

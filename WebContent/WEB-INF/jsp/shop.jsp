@@ -161,7 +161,7 @@
 		<div class="breadcrumbs-two">
 			<div class="container">
 				<div class="row">
-					<img src="<%=request.getContextPath()%>/images/ressources/images/1610099936d9be7c0382cfe00faeb2945e6a611c60.webp" alt="promo"
+					<img src="<%=request.getContextPath()%>/ressources/images/1610099936d9be7c0382cfe00faeb2945e6a611c60.webp" alt="promo"
 					style="width: 100%; margin-top: 15px;">
 				</div>
 			</div>
