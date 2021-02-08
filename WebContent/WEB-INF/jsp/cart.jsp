@@ -171,7 +171,7 @@
 									<br>
 									<div class="row">
 										<div class="col-md-12 text-center">
-											<p><a href="checkout" class="btn btn-primary">Buy Now</a></p>
+											<p><a href="TestUser" class="btn btn-primary">Buy Now</a></p>
 										</div>
 									</div>
 								</div>

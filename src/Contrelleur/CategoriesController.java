@@ -47,16 +47,29 @@ public class CategoriesController {
 	@Autowired
 	private IMiter im;
 	
-	@RequestMapping("/test")
-	public String test()
+	
+	@RequestMapping(value="/verifyClient",method = RequestMethod.POST)
+	public String VarifyClient(HttpServletRequest request ,Model model)
 	{
-		return "test2";
+		String email = request.getParameter("email");
+		String password = request.getParameter("password");
+		if(im.verifyClientExist(email, password)!=null)
+		{
+			model.addAttribute("client",im.verifyClientExist(email, password));
+			return "checkout";
+		}
+		return "TestUser";
+	}
+	
+	@RequestMapping("/TestUser")
+	public String TestUser1()
+	{
+		return "TestUser";
 	}
 	
 	@RequestMapping("/dashboard")
 	public String dashboard()
 	{
-		
 		return "dashboard";
 	}
 	
@@ -229,6 +242,8 @@ public class CategoriesController {
 		model.addAttribute("lescategories",im.ListCategories());
 		return "categorie";
 	}
+	
+	
 	
 	
 	@RequestMapping("/checkout")

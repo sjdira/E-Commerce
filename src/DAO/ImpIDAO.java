@@ -168,6 +168,15 @@ public class ImpIDAO implements IDAO {
 		return list;
 	}
 
+	@Override
+	public Client verifyClientExist(String email, String Paswword) {
+		List<Client> list = null;
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		list =  session.createQuery("from Client c where c.Email='"+email+"' AND  c.password='"+ Paswword +"'").list();
+		return list.get(0);
+	}
+
 	/*@Override
 	public List<Article> getArticlesCategorieByNom(String nomCateg) {
 		// TODO Auto-generated method stub
