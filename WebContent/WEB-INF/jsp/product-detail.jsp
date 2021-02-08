@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	<title>Footwear - Free Bootstrap 4 Template by Colorlib</title>
+	<title>Product Detail</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -52,7 +52,7 @@
 						<div class="col-sm-12 text-left menu-1">
 							
 							<ul>
-								<a class="navbar-brand logo" href="#">Navbar</a>
+								<a class="navbar-brand logo" href="index"><img src="<%=request.getContextPath()%>/ressources/plugins/images/logo.png" alt="homepage" /></a>
 								<li class="active"><a href="index">Home</a></li>
 								<li class="has-dropdown">
 									<a href="shop">Shop</a>
@@ -106,13 +106,6 @@
 				                  <li style="background-color:${Article.getCouleur()};"><a href="#"></a></li>
 				               </ul>
 				            </div>
-				           <!--  <div class="block-26 mb-4">
-									<h4>Width</h4>
-				               <ul>
-				                  <li><a href="#">M</a></li>
-				                  <li><a href="#">W</a></li>
-				               </ul>
-				            </div> -->
 							</div>
 							<form action="Addcart" method="get">
 							<input type="hidden" value="${Article.getIdArticle()}" name="article">
@@ -141,215 +134,42 @@
 						</div>
 					</div>
 				</div>
-
-			<!--<div class="row">
-					<div class="col-sm-12">
-						<div class="row">
-							<div class="col-md-12 pills">
-								<div class="bd-example bd-example-tabs">
-								  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-
-								    <li class="nav-item">
-								      <a class="nav-link active" id="pills-description-tab" data-toggle="pill" href="#pills-description" role="tab" aria-controls="pills-description" aria-expanded="true">Description</a>
-								    </li>
-								    <li class="nav-item">
-								      <a class="nav-link" id="pills-manufacturer-tab" data-toggle="pill" href="#pills-manufacturer" role="tab" aria-controls="pills-manufacturer" aria-expanded="true">Manufacturer</a>
-								    </li>
-								    <li class="nav-item">
-								      <a class="nav-link" id="pills-review-tab" data-toggle="pill" href="#pills-review" role="tab" aria-controls="pills-review" aria-expanded="true">Review</a>
-								    </li>
-								  </ul>
-
-								  <div class="tab-content" id="pills-tabContent">
-								    <div class="tab-pane border fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
-								      <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-										<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-										<ul>
-											<li>The Big Oxmox advised her not to do so</li>
-											<li>Because there were thousands of bad Commas</li>
-											<li>Wild Question Marks and devious Semikoli</li>
-											<li>She packed her seven versalia</li>
-											<li>tial into the belt and made herself on the way.</li>
-										</ul>
-								    </div>
-
-								    <div class="tab-pane border fade" id="pills-manufacturer" role="tabpanel" aria-labelledby="pills-manufacturer-tab">
-								      <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-										<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-								    </div>
-
-								    <div class="tab-pane border fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
-								      <div class="row">
-								   		<div class="col-md-8">
-								   			<h3 class="head">23 Reviews</h3>
-								   			<div class="review">
-										   		<div class="user-img" style="background-image: url(<%=request.getContextPath()%>/ressources/images/person1.jpg)"></div>
-										   		<div class="desc">
-										   			<h4>
-										   				<span class="text-left">Jacob Webb</span>
-										   				<span class="text-right">14 March 2018</span>
-										   			</h4>
-										   			<p class="star">
-										   				<span>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-half"></i>
-										   					<i class="icon-star-empty"></i>
-									   					</span>
-									   					<span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
-										   			</p>
-										   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
-										   		</div>
-										   	</div>
-										   	<div class="review">
-										   		<div class="user-img" style="background-image: url(<%=request.getContextPath()%>/ressources/images/person2.jpg)"></div>
-										   		<div class="desc">
-										   			<h4>
-										   				<span class="text-left">Jacob Webb</span>
-										   				<span class="text-right">14 March 2018</span>
-										   			</h4>
-										   			<p class="star">
-										   				<span>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-half"></i>
-										   					<i class="icon-star-empty"></i>
-									   					</span>
-									   					<span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
-										   			</p>
-										   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
-										   		</div>
-										   	</div>
-										   	<div class="review">
-										   		<div class="user-img" style="background-image: url(<%=request.getContextPath()%>/ressources/images/person3.jpg)"></div>
-										   		<div class="desc">
-										   			<h4>
-										   				<span class="text-left">Jacob Webb</span>
-										   				<span class="text-right">14 March 2018</span>
-										   			</h4>
-										   			<p class="star">
-										   				<span>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-half"></i>
-										   					<i class="icon-star-empty"></i>
-									   					</span>
-									   					<span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
-										   			</p>
-										   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
-										   		</div>
-										   	</div>
-								   		</div>
-								   		<div class="col-md-4">
-								   			<div class="rating-wrap">
-									   			<h3 class="head">Give a Review</h3>
-									   			<div class="wrap">
-										   			<p class="star">
-										   				<span>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					(98%)
-									   					</span>
-									   					<span>20 Reviews</span>
-										   			</p>
-										   			<p class="star">
-										   				<span>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-empty"></i>
-										   					(85%)
-									   					</span>
-									   					<span>10 Reviews</span>
-										   			</p>
-										   			<p class="star">
-										   				<span>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-empty"></i>
-										   					<i class="icon-star-empty"></i>
-										   					(70%)
-									   					</span>
-									   					<span>5 Reviews</span>
-										   			</p>
-										   			<p class="star">
-										   				<span>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-empty"></i>
-										   					<i class="icon-star-empty"></i>
-										   					<i class="icon-star-empty"></i>
-										   					(10%)
-									   					</span>
-									   					<span>0 Reviews</span>
-										   			</p>
-										   			<p class="star">
-										   				<span>
-										   					<i class="icon-star-full"></i>
-										   					<i class="icon-star-empty"></i>
-										   					<i class="icon-star-empty"></i>
-										   					<i class="icon-star-empty"></i>
-										   					<i class="icon-star-empty"></i>
-										   					(0%)
-									   					</span>
-									   					<span>0 Reviews</span>
-										   			</p>
-										   		</div>
-									   		</div>
-								   		</div>
-								   	</div>
-								    </div>
-								  </div>
-								</div>
-				         </div>
-						</div>
-					</div>
-				</div>-->
 			</div>
 		</div>
+		</div>
 
-		<footer class="footer-distributed">
+<footer class="footer-distributed">
  
 			<div class="footer-left">
 	 
-			<h3>Elegan<span>cia</span></h3>
+			<a class="navbar-brand logo" href="index"><img src="<%=request.getContextPath()%>/ressources/plugins/images/logo.png" alt="homepage" /></a>
 	 
 			<p class="footer-links">
 			<a href="index">Home</a>
 		
 			<a href="shop">Shop</a>
 		
-			<a href="about">About</a>
+			<a href="about">About Us</a>
 		
-			<a href="contact">Contact</a>
+			<a href="contact">Contact Us</a>
 			</p>
-	 
-			<p class="footer-company-name">Elegancia &copy; 2021</p>
 			</div>
 	 
 			<div class="footer-center">
 	 
 			<div>
 			<i class="fa fa-map-marker"></i>
-			<p><span>Boulevard El Qods,ain chok</span> Casablanca, maroc</p>
+			<p>19, Boulevard El Qods, Ain chock<br>Casablanca, maroc</p>
 			</div>
 	 
 			<div>
 			<i class="fa fa-phone"></i>
-			<p>+212 555 123456</p>
+			<a href="tel://0555123456"><p>+212 555 123456</p></a>
 			</div>
 	 
 			<div>
 			<i class="fa fa-envelope"></i>
-			<p><a href="mailto:support@company.com">contact@Elegancia.com</a></p>
+			<a href="mailto:contact@Elegancia.ma"><p>contact@Elegancia.com</p></a>
 			</div>
 	 
 			</div>
@@ -373,11 +193,14 @@
 			</div>
 	 
 			</footer>
+			
+	
 	</div>
-
+	
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
 	</div>
+	
 	
 	<!-- jQuery -->
 	<script src="<%=request.getContextPath()%>/ressources/js/jquery.min.js"></script>
@@ -440,4 +263,3 @@
 	</script>
 	</body>
 </html>
-

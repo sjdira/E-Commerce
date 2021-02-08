@@ -56,13 +56,14 @@
 									<a href="shop">Shop</a>
 								</li>
 								<li><a href="about">About Us</a></li>
-								<li><a href="contact">Contact</a></li>
+								<li><a href="contact">Contact Us</a></li>
 								<c:set var="sum" value="0"></c:set>
 						        <c:forEach var="it" items="${cart}">
 						        <c:set var="sum" value="${sum=sum+1}"></c:set>
 						        </c:forEach>
+						        <li class="cart"><a href="cart"><i class="icon-shopping-cart"></i> Cart [${sum}]</a></li>
 								<li class="cart"><a href="login"><i class="bi bi-box-arrow-right"></i> Sign In</a></li>
-								<li class="cart"><a href="cart"><i class="icon-shopping-cart"></i> Cart [${sum}]</a></li>
+								
 							</ul>
 								<!-- <input id="recherche" type="text" placeholder="Search...">
  								 <div class="search"></div> -->
@@ -299,7 +300,7 @@
 		
 			<a href="about">About Us</a>
 		
-			<a href="contact">Contact</a>
+			<a href="contact">Contact Us</a>
 			</p>
 			</div>
 	 
@@ -307,7 +308,7 @@
 	 
 			<div>
 			<i class="fa fa-map-marker"></i>
-			<p>19, Boulevard El Qods, Ain chok<br>Casablanca, maroc</p>
+			<p>19, Boulevard El Qods, Ain chock<br>Casablanca, maroc</p>
 			</div>
 	 
 			<div>

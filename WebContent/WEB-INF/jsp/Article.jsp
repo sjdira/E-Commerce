@@ -36,6 +36,7 @@
 </head>
 
 <body>
+
  <!-- <div>
   <form:form action="saveArticle" modelAttribute="article" method="post" enctype="multipart/form-data">
   <table>
@@ -142,6 +143,7 @@
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
+    
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
         <!-- ============================================================== -->
@@ -205,6 +207,7 @@
                     </ul>
                 </div>
             </nav>
+            
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
@@ -404,36 +407,34 @@
  
 			<div class="footer-left">
 	 
-			<h3>Elegan<span>cia</span></h3>
+			<a class="navbar-brand logo" href="index"><img src="<%=request.getContextPath()%>/ressources/plugins/images/logo.png" alt="homepage" /></a>
 	 
 			<p class="footer-links">
-			<a href="index.jsp">Home</a>
+			<a href="index">Home</a>
 		
-			<a href="shop.jsp">Shop</a>
+			<a href="shop">Shop</a>
 		
-			<a href="about.jsp">About</a>
+			<a href="about">About Us</a>
 		
-			<a href="contact.jsp">Contact</a>
+			<a href="contact">Contact Us</a>
 			</p>
-	 
-			<p class="footer-company-name">Elegancia &copy; 2021</p>
 			</div>
 	 
 			<div class="footer-center">
 	 
 			<div>
 			<i class="fa fa-map-marker"></i>
-			<p><span>Boulevard El Qods,ain chok</span> Casablanca, maroc</p>
+			<p>19, Boulevard El Qods, Ain chock<br>Casablanca, maroc</p>
 			</div>
 	 
 			<div>
 			<i class="fa fa-phone"></i>
-			<p>+212 555 123456</p>
+			<a href="tel://0555123456"><p>+212 555 123456</p></a>
 			</div>
 	 
 			<div>
 			<i class="fa fa-envelope"></i>
-			<p><a href="mailto:support@company.com">contact@Elegancia.com</a></p>
+			<a href="mailto:contact@Elegancia.ma"><p>contact@Elegancia.com</p></a>
 			</div>
 	 
 			</div>

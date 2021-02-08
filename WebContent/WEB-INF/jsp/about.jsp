@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	<title>about us</title>
+	<title>About Us</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -57,8 +57,8 @@
 								<li class="has-dropdown">
 									<a href="shop">Shop</a>
 								</li>
-								<li  class="active"><a href="about">About</a></li>
-								<li><a href="contact">Contact</a></li>
+								<li  class="active"><a href="about">About Us</a></li>
+								<li><a href="contact">Contact Us</a></li>
 								<c:set var="sum" value="0"></c:set>
 						        <c:forEach var="it" items="${cart}">
 						        <c:set var="sum" value="${sum=sum+1}"></c:set>
@@ -80,7 +80,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-5 col-lg-5 col-md-12 center video-container">
-							<iframe width="540" height="500" src="https://www.youtube.com/embed/yelRGO5V4QY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<video controls preload="auto" loop="loop" muted="muted" autoplay="autoplay" preload="auto" width="100%" height="100%">
+								<source src="<%=request.getContextPath()%>/ressources/chemises/elegancia.mp4" type="video/mp4">
+							</video>
 					</div>
 					<div class="col-xl-2 col-lg-2  "></div>
 					<div class="col-xl-5 col-lg-5 col-md-12 textRight">
@@ -114,7 +116,7 @@
 		
 			<a href="about">About Us</a>
 		
-			<a href="contact">Contact</a>
+			<a href="contact">Contact Us</a>
 			</p>
 			</div>
 	 
@@ -122,7 +124,7 @@
 	 
 			<div>
 			<i class="fa fa-map-marker"></i>
-			<p>19, Boulevard El Qods, Ain chok<br>Casablanca, maroc</p>
+			<p>19, Boulevard El Qods, Ain chock<br>Casablanca, maroc</p>
 			</div>
 	 
 			<div>
