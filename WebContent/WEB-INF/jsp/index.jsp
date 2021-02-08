@@ -55,7 +55,7 @@
 								<li class="has-dropdown">
 									<a href="shop">Shop</a>
 								</li>
-								<li><a href="about">About</a></li>
+								<li><a href="about">About Us</a></li>
 								<li><a href="contact">Contact</a></li>
 								<c:set var="sum" value="0"></c:set>
 						        <c:forEach var="it" items="${cart}">
@@ -307,17 +307,17 @@
 	 
 			<div>
 			<i class="fa fa-map-marker"></i>
-			<p><span>19, Boulevard El Qods, Ain chok</span> Casablanca, maroc</p>
+			<p>19, Boulevard El Qods, Ain chok<br>Casablanca, maroc</p>
 			</div>
 	 
 			<div>
 			<i class="fa fa-phone"></i>
-			<p><a href="tel://0555123456">+212 555 123456</a></p>
+			<a href="tel://0555123456"><p>+212 555 123456</p></a>
 			</div>
 	 
 			<div>
 			<i class="fa fa-envelope"></i>
-			<p><a href="mailto:contact@Elegancia.ma">contact@Elegancia.com</a></p>
+			<a href="mailto:contact@Elegancia.ma"><p>contact@Elegancia.com</p></a>
 			</div>
 	 
 			</div>
