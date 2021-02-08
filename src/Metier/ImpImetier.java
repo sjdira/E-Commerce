@@ -114,4 +114,10 @@ public class ImpImetier implements IMiter {
 		return idao.ListNVArticles();
 	}
 
+	@Override
+	public Client verifyClientExist(String email, String Paswword) {
+		
+		return idao.verifyClientExist(email, Paswword);
+	}
+
 }

@@ -25,4 +25,5 @@ public interface IMiter {
 	
 	public void AddClient(Client c);
 	//public Commande AddCommande(Panie p , Client c);
+	public Client verifyClientExist(String email,String Paswword);
 }

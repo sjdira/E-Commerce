@@ -12,6 +12,7 @@ import org.springframework.core.io.Resource;
 import DAO.ImpIDAO;
 import Entity.Article;
 import Entity.Categorie;
+import Entity.Client;
 import util.HibernateUtil;
 
 public class test {
@@ -53,11 +54,8 @@ public class test {
 		   System.out.println(a.getIdArticle());
 	   }*/
 	    
-	    List<Article> l = im.getArticlesCategorie(new Long(73));
-	    for(Article a : l)
-	    {
-	    	System.out.println(a.getIdArticle());
-	    }
+	   Client c = im.verifyClientExist("salma@gmail.com", "salma123");
+	   System.out.println(c.getNomClient());
 }
 
 }

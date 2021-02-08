@@ -1,3 +1,5 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -51,11 +53,11 @@
 							
 							<ul>
 								<a class="navbar-brand logo" href="#">Navbar</a>
-								<li class="active"><a href="index">Home</a></li>
+								<li><a href="index">Home</a></li>
 								<li class="has-dropdown">
 									<a href="shop">Shop</a>
 								</li>
-								<li class="active"><a href="about">About</a></li>
+								<li  class="active"><a href="about">About</a></li>
 								<li><a href="contact">Contact</a></li>
 								<c:set var="sum" value="0"></c:set>
 						        <c:forEach var="it" items="${cart}">

@@ -1,5 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>    
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
+<%@ page import="Entity.Client" %>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -164,7 +165,10 @@
 							        </form:select>
 			                  </div>
 			               </div>	
-						   
+						   <% Client c = (Client)request.getAttribute("client"); %>
+			               <% if(c.getIdClient()==null) 
+			               {
+			            	   %>
 						   <div class="col-md-12">
 									<div class="form-group">
 										<label for="companyname">password</label>
@@ -177,10 +181,13 @@
 			                    	<form:input type="password" path="" class="form-control" placeholder="password"/>
 			                  </div>
 			               </div>
-			                <div class="col-md-12 text-center">
-								<input type="submit" class="btn btn-primary" value="Save Information">
-							</div>
-			                 
+			               
+			            	   		<div class="col-md-12 text-center">
+								    <input type="submit" class="btn btn-primary" value="Save Information">
+								     </div>
+			            	   <%
+			               }
+			               %>
 			               </div>
 		               </div>
 		               </form:form>
@@ -241,11 +248,17 @@
 								</div>
 							</div>
 						</div>
+						<% Client c = (Client)request.getAttribute("client"); %>
+						<% if(c.getIdClient()!=null)
+						{
+						%>
+						
 						<div class="row">
 							<div class="col-md-12 text-center">
 								<p><a href="order-complete" class="btn btn-primary">Place an order</a></p>
 							</div>
 						</div>
+						<% } %>
 					</div>		            
 					</div>
 
