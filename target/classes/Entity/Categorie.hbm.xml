@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-
+//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="Entity">
+<class name="Entity.Categorie" table="Categorie">
+
+<id name="idCategorie" column="idCategorie">
+<generator class="native"></generator>
+</id>
+<property name="NomCategorie" column="NomCategorie"></property>
+<property name="description" column="description"></property>
+<property name="photo" column="photo"></property>
+<set name="articles" inverse="true">
+ <key column="idCategorie"/>
+ <one-to-many class="Entity.Article"/>
+ </set>
+</class>
+</hibernate-mapping>

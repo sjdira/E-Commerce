@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-
+//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="Entity">
+<class name="Entity.Article" table="Article">
+<id name="idArticle" column="idArticle">
+<generator class="native"/>
+</id>
+<property name="designation"/>
+<property name="prix"/>
+<property name="quantite"/>
+<property name="tva"/>
+<property name="description"/>
+<property name="photo"/>
+<property name="solde"/>
+<property name="dispo"/>
+<property name="taille"/>
+<property name="couleur"/>
+<many-to-one name="categorie"
+column="idCategorie"/>
+</class>
+</hibernate-mapping>

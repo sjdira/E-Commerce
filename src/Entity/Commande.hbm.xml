@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-
+//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="Entity">
+<class name="Entity.Commande" table="Commande">
+<id name="idCommande" column="idCommande">
+<generator class="native"/>
+</id>
+<property name="dateCommande"/>
+<many-to-one name="client"
+column="idClient"/>
+
+<list name="lignecmds" table="lignecmds">
+ <key column="idCommande"/>
+ <list-index column="idlignecmd"/>
+ <composite-element class="Entity.lignecmd">
+ <property name="quantite" column="quantite"/>
+ <property name="prix" column="prix"/>
+ <many-to-one name="article" column="idArticle"
+ class="Entity.Article"/>
+ </composite-element>
+ </list>
+ </class>
+</hibernate-mapping>
