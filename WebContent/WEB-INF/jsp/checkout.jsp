@@ -40,7 +40,6 @@
 
 	</head>
 	<body>
-		
 	<div class="colorlib-loader"></div>
 
 	<div id="page">
@@ -214,7 +213,7 @@
 
 						   <div class="w-100"></div>
 
-						   <div class="col-md-12">
+						   <!-- <div class="col-md-12">
 								<div class="cart-detail">
 									<h2>Payment Method</h2>
 									<div class="form-group">
@@ -246,7 +245,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div>// -->
 						</div>
 						<% Client c = (Client)request.getAttribute("client"); %>
 						<% if(c.getIdClient()!=null)

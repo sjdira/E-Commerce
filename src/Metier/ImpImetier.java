@@ -1,5 +1,6 @@
 package Metier;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -119,6 +120,11 @@ public class ImpImetier implements IMiter {
 	public Client verifyClientExist(String email, String Paswword) {
 		
 		return idao.verifyClientExist(email, Paswword);
+	}
+
+	@Override
+	public void addCommande(Date date, Client client) {
+		idao.addCommande(date, client);
 	}
 
 }

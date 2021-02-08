@@ -1,5 +1,6 @@
 package Metier;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -54,8 +55,7 @@ public class test {
 		   System.out.println(a.getIdArticle());
 	   }*/
 	    
-	   Client c = im.verifyClientExist("salma@gmail.com", "salma123");
-	   System.out.println(c.getNomClient());
+	    
 }
 
 }
