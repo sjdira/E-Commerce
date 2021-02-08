@@ -46,8 +46,7 @@ public class CategoriesController {
 
 	@Autowired
 	private IMiter im;
-	
-
+/*
 	@RequestMapping("/order-complete")
 	public String order(HttpSession session)
 	{
@@ -56,6 +55,7 @@ public class CategoriesController {
 		return "order-complete";
 	}
 	
+	*/
 
 	@RequestMapping("/")
 	public String index2(Model model)
@@ -67,7 +67,6 @@ public class CategoriesController {
 	@RequestMapping(value="/verifyClient",method = RequestMethod.POST)
 	public String VarifyClient(HttpServletRequest request ,Model model,HttpSession session)
 	{
-		
 		
 			String email = request.getParameter("email");
 			String password = request.getParameter("password");
