@@ -1,5 +1,6 @@
 package Metier;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -26,4 +27,5 @@ public interface IMiter {
 	public void AddClient(Client c);
 	//public Commande AddCommande(Panie p , Client c);
 	public Client verifyClientExist(String email,String Paswword);
+	public void addCommande(Date date, Client client);
 }

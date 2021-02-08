@@ -1,5 +1,7 @@
 package DAO;
 
+import java.util.Date;
+
 import java.util.List;
 
 
@@ -175,6 +177,20 @@ public class ImpIDAO implements IDAO {
 		session.beginTransaction();
 		list =  session.createQuery("from Client c where c.Email='"+email+"' AND  c.password='"+ Paswword +"'").list();
 		return list.get(0);
+	}
+
+	@Override
+	public void addCommande(Date date, Client client) {
+		Session session=HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Commande comm=new Commande();
+		comm.setDateCommande(date);
+		client.addCommande(comm);
+		comm.setClient(client);
+		session.save(comm);
+		session.getTransaction().commit();
+		HibernateUtil.getSessionFactory().close();
+		
 	}
 
 	/*@Override

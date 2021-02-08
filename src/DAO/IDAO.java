@@ -1,5 +1,6 @@
 package DAO;
 
+import java.util.Date;
 import java.util.List;
 
 import Entity.*;
@@ -26,4 +27,5 @@ public interface IDAO {
 	public void AddClient(Client c);
 	//public Commande AddCommande(Panie p , Client c);
 	public Client verifyClientExist(String email,String Paswword);
+	public void addCommande(Date date, Client client);
 }

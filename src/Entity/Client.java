@@ -78,4 +78,8 @@ public class Client {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public void addCommande(Commande comm) {
+		// TODO Auto-generated method stub
+		commandes.add(comm);
+	}
 }

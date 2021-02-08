@@ -6,8 +6,8 @@ import java.io.ByteArrayInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -47,29 +47,49 @@ public class CategoriesController {
 	@Autowired
 	private IMiter im;
 	
+
+	@RequestMapping("/order-complete")
+	public String order(HttpSession session)
+	{
+		Client c = (Client)session.getAttribute("Client");
+		im.addCommande(new Date(),c);
+		return "order-complete";
+	}
+	
+
 	@RequestMapping("/")
 	public String index2(Model model)
 	{
 		model.addAttribute("ListNVArticle", im.ListNVArticles());
 		return "index";
 	}
-	
+
 	@RequestMapping(value="/verifyClient",method = RequestMethod.POST)
-	public String VarifyClient(HttpServletRequest request ,Model model)
+	public String VarifyClient(HttpServletRequest request ,Model model,HttpSession session)
 	{
-		String email = request.getParameter("email");
-		String password = request.getParameter("password");
-		if(im.verifyClientExist(email, password)!=null)
-		{
-			model.addAttribute("client",im.verifyClientExist(email, password));
-			return "checkout";
-		}
-		return "TestUser";
+		
+		
+			String email = request.getParameter("email");
+			String password = request.getParameter("password");
+			if(im.verifyClientExist(email, password)!=null)
+			{
+				model.addAttribute("client",im.verifyClientExist(email, password));
+				return "checkout";
+			}
+			return "TestUser";
+		
+		
+		
 	}
 	
 	@RequestMapping("/TestUser")
-	public String TestUser1()
+	public String TestUser1(HttpSession session,Model model)
 	{
+		if(session.getAttribute("Client")!=null)
+		{
+			model.addAttribute("client", (Client)session.getAttribute("Client"));
+			return "checkout";
+		}
 		return "TestUser";
 	}
 	
@@ -86,11 +106,13 @@ public class CategoriesController {
 	}
 	
 	
+
 	@RequestMapping("/order-complete")
 	public String order()
 	{
 		return "order-complete";
 	}
+
 	
 	@RequestMapping("/Addcart")
 	public  String Addcart(Long article , int quantity,Model model,HttpSession session)
@@ -124,6 +146,26 @@ public class CategoriesController {
 			session.setAttribute("cart",cart);
 		}
 		return "cart";
+	}
+	
+	@RequestMapping("/saveClient")
+	public String saveClient(Client c ,Model model,BindingResult res ,HttpSession session)
+	{
+		if(session.getAttribute("Client")==null)
+		{
+			if(res.hasErrors())
+			{
+				return "checkout";
+			}	
+			if(c !=null)
+			{
+				im.AddClient(c);
+				session.setAttribute("Client",c);
+			}
+		}
+		
+		//model.addAttribute("categorie",new Categorie());
+		return "checkout";
 	}
 	
 	private int ArticleExist(Long id,HttpSession session)
@@ -163,7 +205,7 @@ public class CategoriesController {
 		String password= request.getParameter("pass");
 		if(login.equals("admin")&&password.equals("admin123"))
 		{
-			return "admin";
+			return "dashboard";
 		}
 		return "login";
 	}
@@ -260,20 +302,7 @@ public class CategoriesController {
 		return "checkout";
 	}
 	
-	@RequestMapping("/saveClient")
-	public String saveClient(Client c ,Model model,BindingResult res )
-	{
-		if(res.hasErrors())
-		{
-			return "checkout";
-		}	
-		if(c !=null)
-		{
-			im.AddClient(c);
-		}
-		model.addAttribute("categorie",new Categorie());
-		return "checkout";
-	}
+	
 	
 	@RequestMapping("/save")
 	public String saveCat(Categorie cat,Model model,BindingResult res,MultipartFile file) throws IOException
