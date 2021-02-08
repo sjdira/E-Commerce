@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	<title>Contact</title>
+	<title>Contact Us</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -63,13 +63,13 @@
 						<div class="col-sm-12 text-left menu-1">
 							
 							<ul>
-								<a class="navbar-brand logo" href="#">Navbar</a>
+								<a class="navbar-brand logo" href="index"><img src="<%=request.getContextPath()%>/ressources/plugins/images/logo.png" alt="homepage" /></a>
 								<li ><a href="index">Home</a></li>
 								<li class="has-dropdown">
 									<a href="shop">Shop</a>
 								</li>
-								<li><a href="about">About</a></li>
-								<li class="active"><a href="contact">Contact</a></li>
+								<li><a href="about">About Us</a></li>
+								<li class="active"><a href="contact">Contact Us</a></li>
 								<c:set var="sum" value="0"></c:set>
 						        <c:forEach var="it" items="${cart}">
 						        <c:set var="sum" value="${sum=sum+1}"></c:set>
@@ -77,8 +77,8 @@
 								<li class="cart"><a href="cart"><i class="icon-shopping-cart"></i> Cart [${sum}]</a></li>
 								<li class="cart"><a href="login"><i class="bi bi-box-arrow-right"></i> Sign In</a></li>
 							</ul>
-								<input id="recherche" type="text" placeholder="Search...">
- 								 <div class="search"></div>
+								<!-- <input id="recherche" type="text" placeholder="Search...">
+ 								 <div class="search"></div> -->
 						</div>
 					</div>
 				</div>
@@ -169,33 +169,22 @@
 						<h3>Contact Information</h3>
 						<div class="row contact-info-wrap">
 							<div class="col-sm-6 col-md-3">
-								<p><span><i class="icon-location"></i></span> Bd Souhaib Erroumi - <br> Sidi Bernoussi Casablanca, <br> Théâtre Moulay <br> Avenue Colonnel Allam</p>
+								<p><span><i class="icon-location"></i></span> 19, Boulevard El Qods<br>Ain chock<br>Casablanca, Maroc
 							</div>
 							<div class="col-sm-6 col-md-3">
-								<p><span><i class="icon-phone3"></i></span> <a href="tel://1234567920">+ 212 (0)5 22 75 77 12</a></p>
+								<p><span><i class="icon-phone3"></i></span> <a href="tel://0555123456">+212 555 123456</a></p>
 							</div>
 							<div class="col-sm-6 col-md-3">
-								<p><span><i class="icon-paperplane"></i></span> <a href="mailto:team@yoursite.com">team@oursite.com</a></p>
+								<p><span><i class="icon-paperplane"></i></span> <a href="mailto:contact@Elegancia.ma">contact@Elegancia.com</a></p>
 							</div>
 							<div class="col-sm-6 col-md-3">
-								<p><span><i class="icon-globe"></i></span> <a href="#">yoursite.com</a></p>
+								<p><span><i class="icon-globe"></i></span> <a href="index">Elegancia.com</a></p>
 							</div>
 						</div>
+						<p>Get answers to all your questions about our online service here</p>
 					</div>
 				</div>
 
-				<div class="row">
-					<div class="col text-center">
-						<h3>Online Store</h3>
-						<div class="row contact-info-wrap">
-							<div class="col text-center">
-								<p><span><i class="icon-paperplane"></i></span> <a href="#">SHAT</a></p>
-								<p>Get answers to all your questions about our online service here</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				
 				<div class="row">
 					<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
 						<div class="contact-wrap">
@@ -246,7 +235,7 @@
 						</div>
 					</div>
 					<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 img-container">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53163.84635909082!2d-7.52785614460363!3d33.612039616214076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cb0124a1b09b%3A0x4e26877f8b61f636!2sSidi%20Bernoussi%2C%20Casablanca!5e0!3m2!1sfr!2sma!4v1610238393880!5m2!1sfr!2sma" width="540" height="717" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>	
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.8654281980703!2d-7.62366908479863!3d33.53088428075096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda63297ade686c5%3A0xe4a5f74e90762ac6!2sBoulevard%20El%20Qods%2C%20Casablanca!5e0!3m2!1sfr!2sma!4v1612814684759!5m2!1sfr!2sma" width="570" height="717" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 					</div>
 				</div>
 			</div>
@@ -255,36 +244,34 @@
  
 			<div class="footer-left">
 	 
-			<h3>Elegan<span>cia</span></h3>
+			<a class="navbar-brand logo" href="index"><img src="<%=request.getContextPath()%>/ressources/plugins/images/logo.png" alt="homepage" /></a>
 	 
 			<p class="footer-links">
-			<a href="index.jsp">Home</a>
+			<a href="index">Home</a>
 		
-			<a href="shop.jsp">Shop</a>
+			<a href="shop">Shop</a>
 		
-			<a href="about.jsp">About</a>
+			<a href="about">About Us</a>
 		
-			<a href="contact.jsp">Contact</a>
+			<a href="contact">Contact Us</a>
 			</p>
-	 
-			<p class="footer-company-name">Elegancia &copy; 2021</p>
 			</div>
 	 
 			<div class="footer-center">
 	 
 			<div>
 			<i class="fa fa-map-marker"></i>
-			<p><span>Boulevard El Qods,ain chok</span> Casablanca, maroc</p>
+			<p>19, Boulevard El Qods, Ain chock<br>Casablanca, maroc</p>
 			</div>
 	 
 			<div>
 			<i class="fa fa-phone"></i>
-			<p>+212 555 123456</p>
+			<a href="tel://0555123456"><p>+212 555 123456</p></a>
 			</div>
 	 
 			<div>
 			<i class="fa fa-envelope"></i>
-			<p><a href="mailto:support@company.com">contact@Elegancia.com</a></p>
+			<a href="mailto:contact@Elegancia.ma"><p>contact@Elegancia.com</p></a>
 			</div>
 	 
 			</div>

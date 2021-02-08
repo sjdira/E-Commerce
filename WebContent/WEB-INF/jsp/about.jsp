@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	<title>about us</title>
+	<title>About Us</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -52,13 +52,13 @@
 						<div class="col-sm-12 text-left menu-1">
 							
 							<ul>
-								<a class="navbar-brand logo" href="#">Navbar</a>
+								<a class="navbar-brand logo" href="index"><img src="<%=request.getContextPath()%>/ressources/plugins/images/logo.png" alt="homepage" /></a>
 								<li><a href="index">Home</a></li>
 								<li class="has-dropdown">
 									<a href="shop">Shop</a>
 								</li>
-								<li  class="active"><a href="about">About</a></li>
-								<li><a href="contact">Contact</a></li>
+								<li  class="active"><a href="about">About Us</a></li>
+								<li><a href="contact">Contact Us</a></li>
 								<c:set var="sum" value="0"></c:set>
 						        <c:forEach var="it" items="${cart}">
 						        <c:set var="sum" value="${sum=sum+1}"></c:set>
@@ -66,8 +66,8 @@
 								<li class="cart"><a href="cart"><i class="icon-shopping-cart"></i> Cart [${sum}]</a></li>
 								<li class="cart"><a href="login"><i class="bi bi-box-arrow-right"></i> Sign In</a></li>
 							</ul>
-								<input id="recherche" type="text" placeholder="Search...">
- 								 <div class="search"></div>
+								<!-- <input id="recherche" type="text" placeholder="Search...">
+ 								 <div class="search"></div> -->
 						</div>
 					</div>
 				</div>
@@ -80,7 +80,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-5 col-lg-5 col-md-12 center video-container">
-							<iframe width="540" height="500" src="https://www.youtube.com/embed/yelRGO5V4QY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<video controls preload="auto" loop="loop" muted="muted" autoplay="autoplay" preload="auto" width="100%" height="100%">
+								<source src="<%=request.getContextPath()%>/ressources/chemises/elegancia.mp4" type="video/mp4">
+							</video>
 					</div>
 					<div class="col-xl-2 col-lg-2  "></div>
 					<div class="col-xl-5 col-lg-5 col-md-12 textRight">
@@ -105,36 +107,34 @@
  
 			<div class="footer-left">
 	 
-			<h3>Elegan<span>cia</span></h3>
+			<a class="navbar-brand logo" href="index"><img src="<%=request.getContextPath()%>/ressources/plugins/images/logo.png" alt="homepage" /></a>
 	 
 			<p class="footer-links">
-			<a href="index.jsp">Home</a>
+			<a href="index">Home</a>
 		
-			<a href="shop.jsp">Shop</a>
+			<a href="shop">Shop</a>
 		
-			<a href="about.jsp">About</a>
+			<a href="about">About Us</a>
 		
-			<a href="contact.jsp">Contact</a>
+			<a href="contact">Contact Us</a>
 			</p>
-	 
-			<p class="footer-company-name">Elegancia &copy; 2021</p>
 			</div>
 	 
 			<div class="footer-center">
 	 
 			<div>
 			<i class="fa fa-map-marker"></i>
-			<p><span>Boulevard El Qods,ain chok</span> Casablanca, maroc</p>
+			<p>19, Boulevard El Qods, Ain chock<br>Casablanca, maroc</p>
 			</div>
 	 
 			<div>
 			<i class="fa fa-phone"></i>
-			<p>+212 555 123456</p>
+			<a href="tel://0555123456"><p>+212 555 123456</p></a>
 			</div>
 	 
 			<div>
 			<i class="fa fa-envelope"></i>
-			<p><a href="mailto:support@company.com">contact@Elegancia.com</a></p>
+			<a href="mailto:contact@Elegancia.ma"><p>contact@Elegancia.com</p></a>
 			</div>
 	 
 			</div>

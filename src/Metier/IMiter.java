@@ -7,7 +7,6 @@ import java.util.List;
 import Entity.Article;
 import Entity.Categorie;
 import Entity.Client;
-import Entity.Commande;
 public interface IMiter {
 
 	public Long AddCategorie(Categorie c);

@@ -9097,13 +9097,13 @@ footer{
  
 .footer-distributed .footer-center p span{
 	display:block;
-	font-weight: normal;
-	font-size:14px;
+	font-weight: bold;
+	font-size:16px;
 	line-height:2;
 }
  
 .footer-distributed .footer-center p a{
-	color:  #adc9faed;
+	color:  #ffffff;
 	text-decoration: none;;
 }
  

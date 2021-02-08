@@ -4,9 +4,6 @@
   Creation date: 19/02/2018 02:22
 -->
 <html>
-<!DOCTYPE html>
-<html>
-
 <head>
     <title>Flaticon WebFont</title>
     <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css" />

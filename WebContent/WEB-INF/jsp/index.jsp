@@ -49,22 +49,24 @@
 						<div class="col-sm-12 text-left menu-1">
 							
 							<ul>
-								<a class="navbar-brand logo" href="#">Navbar</a>
+							
+								<a class="navbar-brand logo" href="index"><img src="<%=request.getContextPath()%>/ressources/plugins/images/logo.png" alt="homepage" /></a>
 								<li class="active"><a href="index">Home</a></li>
 								<li class="has-dropdown">
 									<a href="shop">Shop</a>
 								</li>
-								<li><a href="about">About</a></li>
-								<li><a href="contact">Contact</a></li>
+								<li><a href="about">About Us</a></li>
+								<li><a href="contact">Contact Us</a></li>
 								<c:set var="sum" value="0"></c:set>
 						        <c:forEach var="it" items="${cart}">
 						        <c:set var="sum" value="${sum=sum+1}"></c:set>
 						        </c:forEach>
-								<li class="cart"><a href="cart"><i class="icon-shopping-cart"></i> Cart [${sum}]</a></li>
+						        <li class="cart"><a href="cart"><i class="icon-shopping-cart"></i> Cart [${sum}]</a></li>
 								<li class="cart"><a href="login"><i class="bi bi-box-arrow-right"></i> Sign In</a></li>
+								
 							</ul>
-								<input id="recherche" type="text" placeholder="Search...">
- 								 <div class="search"></div>
+								<!-- <input id="recherche" type="text" placeholder="Search...">
+ 								 <div class="search"></div> -->
 						</div>
 					</div>
 				</div>
@@ -92,7 +94,7 @@
 				   		</div>
 			   		</div>
 			   	</li>
-			   	<li style="background-image: url(<%=request.getContextPath()%>/ressources/chemises/Newin_woman.jpg);">
+			   	<li style="background-image: url(<%=request.getContextPath()%>/ressources/chemises/landscape_0.jpg);">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
@@ -107,7 +109,7 @@
 				   		</div>
 			   		</div>
 			   	</li>
-			   	<li style="background-image: url(chemises/Newin_woman.jpg);">
+			   	<li style="background-image: url(<%=request.getContextPath()%>/ressources/chemises/1.png);">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
@@ -131,7 +133,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 text-center">
-						<h2 class="intro">"Style is something each of us already has, all we need to do is find it." —Diane von Furstenberg</h2>
+						<h2 class="intro">"Style is something each of us already has, all we need to do is find it."<br>Diane von Furstenberg</h2>
 					</div>
 				</div>
 			</div>
@@ -289,36 +291,34 @@
  
 			<div class="footer-left">
 	 
-			<h3>Elegan<span>cia</span></h3>
+			<a class="navbar-brand logo" href="index"><img src="<%=request.getContextPath()%>/ressources/plugins/images/logo.png" alt="homepage" /></a>
 	 
 			<p class="footer-links">
-			<a href="index.jsp">Home</a>
+			<a href="index">Home</a>
 		
-			<a href="shop.jsp">Shop</a>
+			<a href="shop">Shop</a>
 		
-			<a href="about.jsp">About</a>
+			<a href="about">About Us</a>
 		
-			<a href="contact.jsp">Contact</a>
+			<a href="contact">Contact Us</a>
 			</p>
-	 
-			<p class="footer-company-name">Elegancia &copy; 2021</p>
 			</div>
 	 
 			<div class="footer-center">
 	 
 			<div>
 			<i class="fa fa-map-marker"></i>
-			<p><span>Boulevard El Qods,ain chok</span> Casablanca, maroc</p>
+			<p>19, Boulevard El Qods, Ain chock<br>Casablanca, maroc</p>
 			</div>
 	 
 			<div>
 			<i class="fa fa-phone"></i>
-			<p>+212 555 123456</p>
+			<a href="tel://0555123456"><p>+212 555 123456</p></a>
 			</div>
 	 
 			<div>
 			<i class="fa fa-envelope"></i>
-			<p><a href="mailto:support@company.com">contact@Elegancia.com</a></p>
+			<a href="mailto:contact@Elegancia.ma"><p>contact@Elegancia.com</p></a>
 			</div>
 	 
 			</div>

@@ -36,6 +36,7 @@
 </head>
 
 <body>
+
  <!-- <div>
   <form:form action="saveArticle" modelAttribute="article" method="post" enctype="multipart/form-data">
   <table>
@@ -142,6 +143,7 @@
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
+    
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
         <!-- ============================================================== -->
@@ -205,6 +207,7 @@
                     </ul>
                 </div>
             </nav>
+            
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
@@ -345,19 +348,18 @@
                                     <thead>
                                         <tr align="center" valign="center" >
                                             <th class="border-top-0">ID</th>
-                                            <th class="border-top-0">designation</th>
-                                            <th class="border-top-0">prix</th>
-                                            <th class="border-top-0">quantite</th>
-                                            <th class="border-top-0">tva</th>
-                                            <th class="border-top-0">description</th>
-                                            <th class="border-top-0">photo</th>
-                                            <th class="border-top-0">solde</th>
-                                            <th class="border-top-0">dispo</th>
-                                            <th class="border-top-0">taille</th>
-                                            <th class="border-top-0">couleur</th>
-                                            <th class="border-top-0">categorie</th>
-                                            <th class="border-top-0">Supprimer</th>
-                                            <th class="border-top-0">Modifier</th>
+                                            <th class="border-top-0">Designation</th>
+                                            <th class="border-top-0">Price</th>
+                                            <th class="border-top-0">Quantity</th>
+                                            <th class="border-top-0">TVA</th>
+                                            <th class="border-top-0">Description</th>
+                                            <th class="border-top-0">Picture</th>
+                                            <th class="border-top-0">Sales</th>
+                                            <th class="border-top-0">Available</th>
+                                            <th class="border-top-0">Size</th>
+                                            <th class="border-top-0">Color</th>
+                                            <th class="border-top-0">Delete</th>
+                                            <th class="border-top-0">Update</th>
                                         </tr>
                                     </thead>
                                     <tbody align="center" valign="center">
@@ -369,7 +371,7 @@
   <td>${article.getQuantite()}</td>
   <td>${article.getTva()}</td>
   <td>${article.getDescription()}</td>
-  <td><img src="getPhotoA?idArticle=${article.getIdArticle()}"></td>
+  <td><img src="getPhotoA?idArticle=${article.getIdArticle()}" width="100%"></td>
   <td>${article.getSolde()}</td>
   <td>${article.getDispo()}</td>
   <td>${article.getTaille()}</td>
@@ -405,36 +407,34 @@
  
 			<div class="footer-left">
 	 
-			<h3>Elegan<span>cia</span></h3>
+			<a class="navbar-brand logo" href="index"><img src="<%=request.getContextPath()%>/ressources/plugins/images/logo.png" alt="homepage" /></a>
 	 
 			<p class="footer-links">
-			<a href="index.jsp">Home</a>
+			<a href="index">Home</a>
 		
-			<a href="shop.jsp">Shop</a>
+			<a href="shop">Shop</a>
 		
-			<a href="about.jsp">About</a>
+			<a href="about">About Us</a>
 		
-			<a href="contact.jsp">Contact</a>
+			<a href="contact">Contact Us</a>
 			</p>
-	 
-			<p class="footer-company-name">Elegancia &copy; 2021</p>
 			</div>
 	 
 			<div class="footer-center">
 	 
 			<div>
 			<i class="fa fa-map-marker"></i>
-			<p><span>Boulevard El Qods,ain chok</span> Casablanca, maroc</p>
+			<p>19, Boulevard El Qods, Ain chock<br>Casablanca, maroc</p>
 			</div>
 	 
 			<div>
 			<i class="fa fa-phone"></i>
-			<p>+212 555 123456</p>
+			<a href="tel://0555123456"><p>+212 555 123456</p></a>
 			</div>
 	 
 			<div>
 			<i class="fa fa-envelope"></i>
-			<p><a href="mailto:support@company.com">contact@Elegancia.com</a></p>
+			<a href="mailto:contact@Elegancia.ma"><p>contact@Elegancia.com</p></a>
 			</div>
 	 
 			</div>

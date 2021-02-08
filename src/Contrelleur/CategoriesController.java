@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -48,6 +47,7 @@ public class CategoriesController {
 	@Autowired
 	private IMiter im;
 	
+
 	@RequestMapping("/order-complete")
 	public String order(HttpSession session)
 	{
@@ -56,7 +56,14 @@ public class CategoriesController {
 		return "order-complete";
 	}
 	
-	
+
+	@RequestMapping("/")
+	public String index2(Model model)
+	{
+		model.addAttribute("ListNVArticle", im.ListNVArticles());
+		return "index";
+	}
+
 	@RequestMapping(value="/verifyClient",method = RequestMethod.POST)
 	public String VarifyClient(HttpServletRequest request ,Model model,HttpSession session)
 	{
@@ -99,8 +106,13 @@ public class CategoriesController {
 	}
 	
 	
-	
-	
+
+	@RequestMapping("/order-complete")
+	public String order()
+	{
+		return "order-complete";
+	}
+
 	
 	@RequestMapping("/Addcart")
 	public  String Addcart(Long article , int quantity,Model model,HttpSession session)
@@ -204,6 +216,8 @@ public class CategoriesController {
 		model.addAttribute("Article", im.GetArticle(idArticle));
 		return "product-detail";
 	}
+	
+	
 	
 	@RequestMapping("/index")
 	public String test(Model model)
