@@ -46,7 +46,7 @@ public class CategoriesController {
 
 	@Autowired
 	private IMiter im;
-/*
+
 	@RequestMapping("/order-complete")
 	public String order(HttpSession session)
 	{
@@ -55,7 +55,6 @@ public class CategoriesController {
 		return "order-complete";
 	}
 	
-	*/
 
 	@RequestMapping("/")
 	public String index2(Model model)
@@ -102,14 +101,6 @@ public class CategoriesController {
 	public String cart()
 	{
 		return "cart";
-	}
-	
-	
-
-	@RequestMapping("/order-complete")
-	public String order()
-	{
-		return "order-complete";
 	}
 
 	

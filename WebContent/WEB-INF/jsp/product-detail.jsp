@@ -79,9 +79,9 @@
 			<div class="container">
 				<div class="row row-pb-lg product-detail-wrap">
 					<div class="col-sm-8">
-					<div class="product-entry border">
+					<div class="product-entry">
 									<a href="#" class="prod-img">
-										<img src="getPhotoA?idArticle=${Article.getIdArticle()} width="100%"  class="img-fluid" >
+										<img src="getPhotoA?idArticle=${Article.getIdArticle()}" class="img-fluid" margin-left="100px">
 									</a>
 					</div>
 					</div>
