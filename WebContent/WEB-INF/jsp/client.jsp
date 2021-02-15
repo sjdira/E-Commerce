@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@page import="Entity.Categorie"%>
+<%@page import="java.util.List"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>    
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="en">
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Article</title>
+	<title>Catégorie</title>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
@@ -34,18 +34,10 @@
 <![endif]-->
 
 </head>
-
 <body>
-    <div class="preloader">
-        <div class="lds-ripple">
-            <div class="lds-pos"></div>
-            <div class="lds-pos"></div>
-        </div>
-    </div>
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
         <!-- ============================================================== -->
@@ -109,7 +101,6 @@
                     </ul>
                 </div>
             </nav>
-            
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
@@ -133,7 +124,6 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Article" aria-expanded="false"><i class="fa fa-table"
                                     aria-hidden="true"></i><span class="hide-menu">Gestion des Articles</span></a></li>
-                                    
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="client" aria-expanded="false"><i class="fa fa-table"
                                     aria-hidden="true"></i><span class="hide-menu">Gestion des Clients</span></a></li>
@@ -162,93 +152,7 @@
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
-            <div class="page-breadcrumb bg-white">
-                 <div class="row align-items-center">
-                    <div class="col-lg-8 center">
-                        <h4> AJOUTER UN ARTICLE : </h4>
-  							<form:form action="saveArticle" modelAttribute="article" method="post" enctype="multipart/form-data">
-  								<table>
-  								<tr>
-								  <td>ID Article</td>
-								  <td><form:input type="hidden" path="idArticle" style="width:255px"/></td>
-								  <td><form:errors path="idArticle" style="width:255px"/></td>
-								  </tr>
-  									<tr>
-										  <td>designation</td>
-										  <td><form:input  path="designation"  style="width:255px"/></td>
-										  <td><form:errors path="designation" style="width:255px"/></td>
-										  </tr>
-									 <tr>
-										  <td>prix</td>
-										  <td><form:input  path="prix" style="width:255px" /></td>
-										  <td><form:errors path="prix" style="width:255px" /></td>
-										  </tr>
-									<tr>
-									  <td>quantite</td>
-									  <td><form:input  path="quantite" style="width:255px"  /></td>
-									  <td><form:errors path="quantite" style="width:255px" /></td>
-									 </tr>
-						  <tr>
-						  <td>tva</td>
-						  <td><form:input  path="tva"  style="width:255px"/></td>
-						  <td><form:errors path="tva" style="width:255px"/></td>
-						  </tr>
-						  <tr>
-						  <td>description</td>
-						  <td><form:textarea  path="description" style="width:255px"/></td>
-						  <td><form:errors path="description" style="width:255px" /></td>
-						  </tr>
-						  <tr>
-						  <td>photo</td>
-						<td><input type="file" name="file" style="width:255px"/></td>
-						  <td></td>
-						  </tr>
-						  <tr>
-						  <td>solde</td>
-						  <td><form:input  path="solde"  style="width:255px"/></td>
-						  <td><form:errors path="solde" style="width:255px"/></td>
-						  </tr>
-						  <tr>
-						  <td>dispo</td>
-						  <td><form:input  path="dispo"  style="width:255px"/></td>
-						  <td><form:errors path="dispo" style="width:255px"/></td>
-						  </tr>
-						  <tr>
-						  <td>taille</td>
-						  <td><form:input  path="taille"  style="width:255px"/></td>
-						  <td><form:errors path="taille" style="width:255px"/></td>
-						  </tr>
-						  <tr>
-						  <td>couleur</td>
-						  <td><form:input  path="couleur" style="width:255px" /></td>
-						  <td><form:errors path="couleur"  style="width:255px"/></td>
-						  </tr>
-						  <tr>
-						  <td>categorie</td>
-						  <td><form:select style="width:255px" path="categorie.idCategorie" items="${categories}" itemLabel="NomCategorie" itemValue="idCategorie"/> 
-						   </td>
-						  <td><form:errors style="width:255px" path="categorie.idCategorie" /></td>
-						  </tr>
-						  <tr>
-						   <td></td>
-						  <td><input type="submit" value="save" class="btn btn-primary" style="width:100px"/></td>
-						  <td></td>
-						  </tr>
-  								</table> 
-  							</form:form>
-                    </div>
-                    
-                    <!-- <div class="col-lg-4">
-                    	<form action="chercherByNom" method="get">
-                    		<input type="text" name="nom" placeholder="enter name product" style="width:255px"> <br><br>
-                    		<input type="submit" value="search" >
-                    	</form>
-                    </div> -->
-                    
-                    
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
+            
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -262,44 +166,36 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">Les articles</h3>
+                            <h3 class="box-title">Les catégories</h3>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr align="center" valign="center" >
                                             <th class="border-top-0">ID</th>
-                                            <th class="border-top-0">Designation</th>
-                                            <th class="border-top-0">Price</th>
-                                            <th class="border-top-0">Quantity</th>
-                                            <th class="border-top-0">TVA</th>
-                                            <th class="border-top-0">Description</th>
-                                            <th class="border-top-0">Picture</th>
-                                            <th class="border-top-0">Sales</th>
-                                            <th class="border-top-0">Available</th>
-                                            <th class="border-top-0">Size</th>
-                                            <th class="border-top-0">Color</th>
-                                            <th class="border-top-0">Delete</th>
-                                            <th class="border-top-0">Update</th>
+                                            <th class="border-top-0">NOM</th>
+                                            <th class="border-top-0">PRENOM</th>
+                                            <th class="border-top-0">Adresse</th>
+                                            <th class="border-top-0">VILLE</th>
+                                            <th class="border-top-0">Sexe</th>
+                                            <th class="border-top-0">TELEPHONE</th>
+                                            <th class="border-top-0">EMAIL</th>
+                                            <th class="border-top-0">Password</th>
                                         </tr>
                                     </thead>
                                     <tbody align="center" valign="center">
-                                     <c:forEach items="${lesArticles}" var="article">
-  <tr>
-  <td>${article.getIdArticle()}</td>
-  <td>${article.getDesignation()}</td>
-  <td>${article.getPrix()}</td>
-  <td>${article.getQuantite()}</td>
-  <td>${article.getTva()}</td>
-  <td>${article.getDescription()}</td>
-  <td><img src="getPhotoA?idArticle=${article.getIdArticle()}" width="100%"></td>
-  <td>${article.getSolde()}</td>
-  <td>${article.getDispo()}</td>
-  <td>${article.getTaille()}</td>
-  <td>${article.getCouleur()}</td>
-  <td><a href="DeleteArticle?idArticle=${article.getIdArticle()}">Delete</a></td>
-  <td><a href="updateArticle?idArticle=${article.getIdArticle()}">update</a></td>
-  </tr>
-  </c:forEach>
+                                     <c:forEach items="${Clients}" var="client">
+                                        <tr>
+                                            <td align="center" valign="center">${client.getIdClient()}</td>
+                                            <td align="center" valign="center">${client.getNomClient()}</td>
+                                            <td align="center" valign="center">${client.getPrenomClient()}</td>
+                                            <td align="center" valign="center">${client.getAdresse()}</td>
+                                            <td align="center" valign="center">${client.getVille()}</td>
+									  		<td align="center" valign="center">${client.getSexe()}</td>
+									  		<td align="center" valign="center">${client.getTelephone()}</td>
+									  		<td align="center" valign="center">${client.getEmail()}</td>
+									  		<td align="center" valign="center">${client.getPassword()}</td>
+                                        </tr>
+                                      </c:forEach>
                                     </tbody>
                                 </table>
                             </div>

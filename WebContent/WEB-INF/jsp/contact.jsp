@@ -189,32 +189,25 @@
 					<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
 						<div class="contact-wrap">
 							<h3>Get In Touch</h3>
-							<form action="contact" class="contact-form" method="post">
+							<form action="MAILTO:Beblio.fstgi@gmail.com?subject=FROM ELEGANCIA" class="contact-form" method="post" enctype="text/plain">
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="fname">First Name</label>
-											<input type="text" id="fname" name="fname" class="form-control" placeholder="Your firstname">
+											<input type="text" id="fname" name="FIRST NAME  " class="form-control" placeholder="Your firstname">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="lname">Last Name</label>
-											<input type="text" id="lname" name="lname" class="form-control" placeholder="Your lastname">
+											<input type="text" id="lname" name="LAST NAME" class="form-control" placeholder="Your lastname">
 										</div>
 									</div>
 									<div class="w-100"></div>
 									<div class="col-sm-12">
 										<div class="form-group">
 											<label for="email">Email</label>
-											<input type="text" id="email" name="email" class="form-control" placeholder="Your email address">
-										</div>
-									</div>
-									<div class="w-100"></div>
-									<div class="col-sm-12">
-										<div class="form-group">
-											<label for="subject">Subject</label>
-											<input type="text" id="subject" name="subject" class="form-control" placeholder="Your subject of this message">
+											<input type="email" id="email" name="EMAIL " class="form-control" placeholder="Your email address">
 										</div>
 									</div>
 									<div class="w-100"></div>
@@ -227,7 +220,7 @@
 									<div class="w-100"></div>
 									<div class="col-sm-12">
 										<div class="form-group">
-											<input type="submit" value="Send Message" class="btn btn-primary">
+											<input type="submit" value="Send Message" class="btn btn-primary" id="sendMail">
 										</div>
 									</div>
 								</div>
@@ -300,7 +293,6 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
 	</div>
-	
 	<!-- jQuery -->
 	<script src="<%=request.getContextPath()%>/ressources/js/jquery.min.js"></script>
    <!-- popper -->

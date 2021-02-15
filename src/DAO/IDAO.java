@@ -25,7 +25,12 @@ public interface IDAO {
 	
 	
 	public void AddClient(Client c);
+	public Client getClient(Long idClient);
+	public List<Client> getClients();
+	public List<Article> filtreCategorieByPrix(Long idCategorie , Double prix);
 	//public Commande AddCommande(Panie p , Client c);
 	public Client verifyClientExist(String email,String Paswword);
-	public void addCommande(Date date, Client client);
+	public Long addCommande(Date date, Client client);
+	public void addProduitToCommande(Long idCommande,item item);
+	
 }

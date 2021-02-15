@@ -123,6 +123,10 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="Article" aria-expanded="false"><i class="fa fa-table"
                                     aria-hidden="true"></i><span class="hide-menu">Gestion des Articles</span></a></li>
+                                    
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="client" aria-expanded="false"><i class="fa fa-table"
+                                    aria-hidden="true"></i><span class="hide-menu">Gestion des Clients</span></a></li>
 	                    <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index"
                                 aria-expanded="false">

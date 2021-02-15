@@ -169,11 +169,14 @@
 										</div>
 									</div>
 									<br>
+									<c:if test="${sum > 0}">
 									<div class="row">
 										<div class="col-md-12 text-center">
 											<p><a href="TestUser" class="btn btn-primary">Buy Now</a></p>
 										</div>
 									</div>
+									</c:if>
+									
 								</div>
 							</div>
 						</div>

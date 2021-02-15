@@ -19,6 +19,6 @@
 <property name="taille"/>
 <property name="couleur"/>
 <many-to-one name="categorie"
-column="idCategorie"/>
+column="idCategorie" class="Entity.Categorie"/>
 </class>
 </hibernate-mapping>

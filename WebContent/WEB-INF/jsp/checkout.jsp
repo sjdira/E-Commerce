@@ -11,7 +11,7 @@
    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Rokkitt:100,300,400,700" rel="stylesheet">
-	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/ressources/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -116,27 +116,27 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="fname">Nom</label>
-										<form:input type="text" path="NomClient" class="form-control" placeholder="Your firstname"/>
+										<form:input type="text" path="NomClient" class="form-control" placeholder="Your firstname" id="Nom" />
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="lname">Prenom</label>
-										<form:input type="text" path="PrenomClient" class="form-control" placeholder="Your lastname"/>
+										<form:input type="text" path="PrenomClient" class="form-control" placeholder="Your lastname" id="Prenom"/>
 									</div>
 								</div>
 
 								<div class="col-md-12">
 									<div class="form-group">
 										<label for="companyname">Ville</label>
-			                    	<form:input type="text" path="ville" class="form-control" placeholder="Ville"/>
+			                    	<form:input type="text" path="ville" class="form-control" placeholder="Ville" id="ville" />
 			                  </div>
 			                  </div>
 
 			                  <div class="col-md-12">
 									<div class="form-group">
 										<label for="fname">Email</label>
-			                    	<form:input type="email" path="Email" class="form-control" placeholder="Email"/>
+			                    	<form:input type="email" path="Email" class="form-control" placeholder="Email" id="email" />
 			                  </div>
 			             
 			               </div>
@@ -144,21 +144,21 @@
 			               <div class="col-md-12">
 									<div class="form-group">
 										<label for="companyname">telephone</label>
-			                    	<form:input type="text" path="telephone" class="form-control" placeholder="telephone"/>
+			                    	<form:input type="text" path="telephone" class="form-control" placeholder="telephone" id="telephone"/>
 			                  </div>
 			               </div>
 			            
 			            	<div class="col-md-12">
 									<div class="form-group">
 										<label for="companyname">Adresse</label>
-			                    	<form:input type="text" path="Adresse" class="form-control" placeholder="Adresse"/>
+			                    	<form:input type="text" path="Adresse" class="form-control" placeholder="Adresse" id="adresse"/>
 			                  </div>
 			               </div>
 						
 							<div class="col-md-12">
 									<div class="form-group">
 									<label for="companyname">Sexe</label>
-			                    	<form:select path="sexe" class="form-control">  
+			                    	<form:select path="sexe" class="form-control" id="sexe">  
 							        <form:option value="Homme" label="Homme"/>  
 							        <form:option value="Femme" label="Femme"/>   
 							        </form:select>
@@ -171,16 +171,9 @@
 						   <div class="col-md-12">
 									<div class="form-group">
 										<label for="companyname">password</label>
-			                    	<form:input type="password" path="password" class="form-control" placeholder="password"/>
+			                    	<form:input type="password" path="password" class="form-control" placeholder="password" id="password1"/>
 			                  </div>
-			               </div>
-			               <div class="col-md-12">
-									<div class="form-group">
-										<label for="companyname">confirm password</label>
-			                    	<form:input type="password" path="" class="form-control" placeholder="password"/>
-			                  </div>
-			               </div>
-			               
+			               </div>			               
 			            	   		<div class="col-md-12 text-center">
 								    <input type="submit" class="btn btn-primary" value="Save Information">
 								     </div>
@@ -206,46 +199,14 @@
 											<span>Subtotal</span> <span>${sum} DH</span>
 										</li>
 										<li><span>livraison</span> <span>${livraison}DH</span></li>
-										<li><span>Order Total</span> <span>${livraison + sum}</span></li>
+										<li><span>Order Total</span> <span id="total">${livraison + sum}</span></li>
 									</ul>
 								</div>
 						   </div>
 
 						   <div class="w-100"></div>
 
-						   <!-- <div class="col-md-12">
-								<div class="cart-detail">
-									<h2>Payment Method</h2>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio"> Direct Bank Tranfer</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio"> Check Payment</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio"> Paypal</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="checkbox">
-											   <label><input type="checkbox" value=""> I have read and accept the terms and conditions</label>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>// -->
+						   
 						</div>
 						<% Client c = (Client)request.getAttribute("client"); %>
 						<% if(c.getIdClient()!=null)
@@ -253,9 +214,12 @@
 						%>
 						
 						<div class="row">
-							<div class="col-md-12 text-center">
-								<p><a href="order-complete" class="btn btn-primary">Place an order</a></p>
-							</div>
+							  <div class="col-md-12 text-center" >
+								<!--<p><a href="order-complete" class="btn btn-primary">Place an order</a></p>-->
+									<div id="paypal-button-container"></div>
+							  </div>
+							
+							
 						</div>
 						<% } %>
 					</div>		            
@@ -325,7 +289,6 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
 	</div>
-	
 	<!-- jQuery -->
 	<script src="<%=request.getContextPath()%>/ressources/js/jquery.min.js"></script>
    <!-- popper -->
@@ -349,6 +312,26 @@
 	<script src="<%=request.getContextPath()%>/ressources/js/jquery.stellar.min.js"></script>
 	<!-- Main -->
 	<script src="<%=request.getContextPath()%>/ressources/js/main.js"></script>
+	<script src="https://www.paypal.com/sdk/js?client-id=AcSW0tbEgTzBvT3m5m_6xhyW11mK3kdI3j2n6v3riC3Lu-qWXKMFpihj9KIUZN5fMwsLKieQfI6F1Zvc&disable-funding=credit,card"></script>
+	<script>paypal.Buttons({style:{color: "blue",shape:'pill'},createOrder : function(data, actions)
+		{
+			return actions.order.create({
+
+				purchase_units : [{amount:{value:document.getElementById("total").innerText}}]
+				
+				 });
+		},onApprove: function(data, actions)
+		{
+			return actions.order.capture().then(function(details)
+					{
+
+						console.log(details);
+						window.location.replace("http://localhost:8080/MR-BALOUKI-PROJET/order-complete.jsp");
+				    })
+		}
+
+	}).render('#paypal-button-container');</script>
+	
 	</body>
 </html>
 

@@ -111,43 +111,18 @@
 		<div class="colorlib-featured">
 			<div class="container">
 				<div class="row">
+				
 				<c:forEach items="${categories}" var="categorie">
+				
 				<div class="col-sm-12 col-lg-6 text-center">
 						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(<%=request.getContextPath()%>/ressources/images/${categorie.getNomCategorie()}.webp); background-size: cover;">
+							<div class="featured-img featured-img-2" style="background-image: url(<%=request.getContextPath()%>/ressources/images/${categorie.getNomCategorie()}.webp); background-size: 100% 100%;" >
 								<h2>${categorie.getNomCategorie()}</h2>
 								<p><a href="${categorie.getNomCategorie()}?idCategorie=${categorie.getIdCategorie()}" class="btn btn-primary btn-lg">Shop now</a></p>
 							</div>
 						</div>
 					</div>
 				</c:forEach>
-				
-				 <!-- 
-				  <div class="col-sm-12 col-lg-3 text-center">
-						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(<%=request.getContextPath()%>/ressources/images/women.jpg);">
-								<h2>Sweat-shirts</h2>
-								<p><a href="SWEAT-SHIRTS.jsp" class="btn btn-primary btn-lg">Shop now</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-12 col-lg-3 text-center">
-						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(<%=request.getContextPath()%>/ressources/images/item-11.jpg);">
-								<h2>Vestes & Manteaux</h2>
-								<p><a href="SWEAT-SHIRTS.jsp" class="btn btn-primary btn-lg">Shop now</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-12 col-lg-3 text-center">
-						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(<%=request.getContextPath()%>/ressources/images/item-11.jpg);">
-								<h2>Robes</h2>
-								<p><a href="ROBES.jsp" class="btn btn-primary btn-lg">Shop now</a></p>
-							</div>
-						</div>
-					</div>
-					-->
 				</div>
 			</div>
 		</div>

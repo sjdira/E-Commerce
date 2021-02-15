@@ -10,6 +10,8 @@ import DAO.IDAO;
 import Entity.Article;
 import Entity.Categorie;
 import Entity.Client;
+import Entity.Commande;
+import Entity.item;
 
 @Repository
 public class ImpImetier implements IMiter {
@@ -122,8 +124,29 @@ public class ImpImetier implements IMiter {
 	}
 
 	@Override
-	public void addCommande(Date date, Client client) {
-		idao.addCommande(date, client);
+	public Long addCommande(Date date, Client client) {
+		return idao.addCommande(date, client);
+	}
+
+	@Override
+	public Client getClient(Long idClient) {
+		return idao.getClient(idClient);
+	}
+
+	@Override
+	public List<Client> getClients() {
+		return idao.getClients();
+	}
+
+	@Override
+	public List<Article> filtreCategorieByPrix(Long idCategorie, Double prix) {
+		return idao.filtreCategorieByPrix(idCategorie, prix);
+	}
+
+	@Override
+	public void addProduitToCommande(Long idCommande, item item) {
+		idao.addProduitToCommande(idCommande, item);
+		
 	}
 
 }

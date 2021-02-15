@@ -14,6 +14,7 @@ import DAO.ImpIDAO;
 import Entity.Article;
 import Entity.Categorie;
 import Entity.Client;
+import Entity.Commande;
 import util.HibernateUtil;
 
 public class test {
@@ -49,12 +50,24 @@ public class test {
 	    Long id =im.AddArticle(a,new Long(1));
 	    System.out.println(id);*/
 	    //System.out.println(im.ListNVArticles().size());
-	   /*List<Article> list = im.ListNVArticles();
+	  /* List<Article> list = im.ListNVArticles();
 	   for(Article a:list)
 	   {
 		   System.out.println(a.getIdArticle());
-	   }*/
+	   }
 	    
+	    Client c = im.getClient(new Long(18));
+	    Commande cmd = im.addCommande(new Date(),c);
+	    System.out.println(cmd.getIdCommande());*/
+	    
+	    List<Article> list = im.filtreCategorieByPrix(new Long(71),new Double(170));
+	    for(Article a : list)
+	    {
+	    	System.out.println(a.getPrix());
+	    }
+	    
+	    Long id = im.addCommande(new Date(),new Client());
+	    System.out.println(id);
 	    
 }
 

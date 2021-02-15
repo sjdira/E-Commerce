@@ -36,6 +36,7 @@ import com.sun.org.apache.xpath.internal.operations.Mod;
 import Entity.Article;
 import Entity.Categorie;
 import Entity.Client;
+import Entity.Commande;
 import Entity.Panier;
 import Entity.item;
 import Metier.IMiter;
@@ -47,16 +48,49 @@ public class CategoriesController {
 	@Autowired
 	private IMiter im;
 	
-
-	@RequestMapping("/order-complete")
-	public String order(HttpSession session)
-	{
-		Client c = (Client)session.getAttribute("Client");
-		im.addCommande(new Date(),c);
-		return "order-complete";
+	
+	@RequestMapping("/filtre")
+	public String filtre(Model model,Double myRange,Long idCategorie)
+	{	
+		model.addAttribute("Articles",im.filtreCategorieByPrix(idCategorie, myRange));
+		return "robes";
 	}
 	
-
+	@RequestMapping(value="/robes",method = RequestMethod.GET)
+	public String robes(Model model,Long idCategorie,ArrayList<Article> list)
+	{
+		list = (ArrayList<Article>) im.getArticlesCategorie(idCategorie);
+		model.addAttribute("Articles",list);
+		return "robes";
+	}
+	@RequestMapping("/client")
+	public String client(Model model)
+	{
+		model.addAttribute("Clients",im.getClients());
+		return "client";
+	}
+	@RequestMapping("/chercherByNom")
+	public String chercherByNom(String nom , Model model)
+	{
+		model.addAttribute("lesArticles",im.getArticlesMotCle(nom));
+		return "Article";
+	}
+	
+	@RequestMapping("/order-complete")
+	public void order(HttpSession session)
+	{
+		Client c = (Client)session.getAttribute("Client");
+		//Commande cmd = im.addCommande(new Date(),c);
+		//return "order-complete";
+		List<item> cart = (List<item>)session.getAttribute("cart");
+		//System.out.println(im.addCommande(new Date(),c));
+		Long idcmd = im.addCommande(new Date(),c);
+		for(item it : cart)
+		{
+			im.addProduitToCommande(idcmd, it);
+		}
+	}
+	
 	@RequestMapping("/")
 	public String index2(Model model)
 	{
@@ -67,19 +101,23 @@ public class CategoriesController {
 	@RequestMapping(value="/verifyClient",method = RequestMethod.POST)
 	public String VarifyClient(HttpServletRequest request ,Model model,HttpSession session)
 	{
-		
-		
 			String email = request.getParameter("email");
 			String password = request.getParameter("password");
-			if(im.verifyClientExist(email, password)!=null)
+			if(email !=null && password !=null)
 			{
-				model.addAttribute("client",im.verifyClientExist(email, password));
-				return "checkout";
+				if(im.verifyClientExist(email, password)!=null)
+				{
+					session.setAttribute("Client",im.verifyClientExist(email, password));
+					model.addAttribute("client",im.verifyClientExist(email, password));
+					return "checkout";
+				}
 			}
+			else
+			{
+				return "TestUser";
+			}
+			
 			return "TestUser";
-		
-		
-		
 	}
 	
 	@RequestMapping("/TestUser")
@@ -107,11 +145,11 @@ public class CategoriesController {
 	
 	
 
-	@RequestMapping("/order-complete")
+	/*@RequestMapping("/order-complete")
 	public String order()
 	{
 		return "order-complete";
-	}
+	}*/
 
 	
 	@RequestMapping("/Addcart")
@@ -233,12 +271,7 @@ public class CategoriesController {
 		return "shop";
 	}
 	
-	@RequestMapping(value="/robes",method = RequestMethod.GET)
-	public String robes(Model model,Long idCategorie)
-	{
-		model.addAttribute("Articles",im.getArticlesCategorie(idCategorie));
-		return "robes";
-	}
+	
 	
 	@RequestMapping(value="/T-sheart",method = RequestMethod.GET)
 	public String sheart(Model model,Long idCategorie)
@@ -326,7 +359,7 @@ public class CategoriesController {
 		}
 		else
 		{
-			if(!cat.getNomCategorie().isEmpty() || !cat.getDescription().isEmpty() || cat.getPhoto().length!=0)
+			if(!cat.getNomCategorie().isEmpty() && !cat.getDescription().isEmpty() && cat.getPhoto().length!=0)
 			{
 				im.AddCategorie(cat);
 			}
@@ -402,7 +435,14 @@ public class CategoriesController {
 		}
 		else
 		{
-			im.AddArticle(article,article.getCategorie().getIdCategorie());
+			if(article.getDesignation() !=null && article.getPrix()!= null && article.getQuantite() !=null && 
+			   article.getTva() !=null	&& 	article.getDescription() !=null && article.getPhoto() !=null 
+			   && article.getSolde() !=null && article.getDispo() !=null 
+			   && article.getTaille() !=null && article.getCouleur() !=null ) 
+			{
+				im.AddArticle(article,article.getCategorie().getIdCategorie());
+			}
+			
 		}
 		model.addAttribute("article",new Article());
 		model.addAttribute("categories",im.ListCategories());
