@@ -127,7 +127,7 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="dashboard" aria-expanded="false"><i class="fas fa-clock fa-fw"
+                                href="admin" aria-expanded="false"><i class="fas fa-clock fa-fw"
                                     aria-hidden="true"></i><span class="hide-menu">Statistics</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="categorie" aria-expanded="false"><i class="fa fa-table"
@@ -222,8 +222,8 @@
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
-                                        <tr align="center" valign="center" >
-                                            <th class="border-top-0">ID</th>
+                                        <tr valign="center" align="center" >
+                                            <th class="border-top-0"  >ID</th>
                                             <th class="border-top-0">Name</th>
                                             <th class="border-top-0">Description</th>
                                             <th class="border-top-0">Picture</th>

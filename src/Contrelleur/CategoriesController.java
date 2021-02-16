@@ -132,6 +132,9 @@ public class CategoriesController {
 		return "TestUser";
 	}
 	
+
+	
+	
 	@RequestMapping("/dashboard")
 	public String dashboard(Model model)
 	{
