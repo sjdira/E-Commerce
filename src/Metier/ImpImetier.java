@@ -12,6 +12,7 @@ import Entity.Categorie;
 import Entity.Client;
 import Entity.Commande;
 import Entity.item;
+import Entity.lignecmd;
 
 @Repository
 public class ImpImetier implements IMiter {
@@ -147,6 +148,16 @@ public class ImpImetier implements IMiter {
 	public void addProduitToCommande(Long idCommande, item item) {
 		idao.addProduitToCommande(idCommande, item);
 		
+	}
+
+	@Override
+	public List<Commande> listCommandes() {
+		return idao.listCommandes();
+	}
+
+	@Override
+	public List<lignecmd> getlignecmd(Long idCommande) {
+		return idao.getlignecmd(idCommande);
 	}
 
 }

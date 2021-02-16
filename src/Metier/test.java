@@ -15,6 +15,7 @@ import Entity.Article;
 import Entity.Categorie;
 import Entity.Client;
 import Entity.Commande;
+import Entity.lignecmd;
 import util.HibernateUtil;
 
 public class test {
@@ -60,14 +61,12 @@ public class test {
 	    Commande cmd = im.addCommande(new Date(),c);
 	    System.out.println(cmd.getIdCommande());*/
 	    
-	    List<Article> list = im.filtreCategorieByPrix(new Long(71),new Double(170));
-	    for(Article a : list)
-	    {
-	    	System.out.println(a.getPrix());
-	    }
-	    
-	    Long id = im.addCommande(new Date(),new Client());
-	    System.out.println(id);
+	   List<Commande> list = im.listCommandes();
+	   for(Commande l: list)
+	   {
+		   System.out.println(l.getDateCommande());
+	   }
+		   
 	    
 }
 

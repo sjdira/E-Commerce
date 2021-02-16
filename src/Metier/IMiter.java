@@ -9,6 +9,7 @@ import Entity.Categorie;
 import Entity.Client;
 import Entity.Commande;
 import Entity.item;
+import Entity.lignecmd;
 public interface IMiter {
 
 	public Long AddCategorie(Categorie c);
@@ -34,4 +35,7 @@ public interface IMiter {
 	public Long addCommande(Date date, Client client);
 	public void addProduitToCommande(Long idCommande, item item);
 	public List<Article> filtreCategorieByPrix(Long idCategorie, Double prix);
+	
+	public List<Commande> listCommandes();
+	public List<lignecmd> getlignecmd(Long idCommande);
 }

@@ -215,11 +215,9 @@
 						
 						<div class="row">
 							  <div class="col-md-12 text-center" >
-								<!--<p><a href="order-complete" class="btn btn-primary">Place an order</a></p>-->
-									<div id="paypal-button-container"></div>
+								    <p><a href="order-complete" class="btn btn-primary">Place an order</a></p>
+									<div id="paypal-button-container"><a href="order-complete"></a></div>
 							  </div>
-							
-							
 						</div>
 						<% } %>
 					</div>		            
@@ -326,7 +324,7 @@
 					{
 
 						console.log(details);
-						window.location.replace("http://localhost:8080/MR-BALOUKI-PROJET/order-complete.jsp");
+						//window.location.replace("http://localhost:8080/MR-BALOUKI-PROJET/order-complete.jsp");
 				    })
 		}
 

@@ -33,8 +33,4 @@ public class lignecmd {
 	public void setPrix(double prix) {
 		this.prix = prix;
 	}
-	
-	
-	
-	
 }

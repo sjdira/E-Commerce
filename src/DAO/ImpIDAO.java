@@ -247,57 +247,23 @@ public class ImpIDAO implements IDAO {
 		HibernateUtil.getSessionFactory().close();
 	}
 
-	/*@Override
-	public void mail(String nom, String prenom, String subject, String msg, String email) {
-		
-		 final String username = "Beblio.fstgi@gmail.com";
-	 		
-	        final String password = "beblio123@@" ; 
-	        		
-
-	        Properties prop = new Properties();
-			prop.put("mail.smtp.host", "smtp.gmail.com");
-	        prop.put("mail.smtp.port", "465");
-	        prop.put("mail.smtp.auth", "true");
-	        prop.put("mail.smtp.socketFactory.port", "465");
-	        prop.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-      
-	        Session session = Session.getInstance(prop,
-	                new javax.mail.Authenticator() {
-	                    protected PasswordAuthentication getPasswordAuthentication() {
-	                        return new PasswordAuthentication(username, password);
-	                    }
-	                });
-
-	        try {
-
-	            Message message = new MimeMessage(session);
-	            message.setFrom(new InternetAddress("Beblio.fstgi@gmail.com"));
-	            message.setRecipients(
-	                    Message.RecipientType.TO,
-	                    InternetAddress.parse(email)
-	            );
-	            message.setSubject("Testing Gmail SSL");
-	            message.setText("Bibliotheque,"
-	                    + "\n\n le livre reserver est prete");
-
-	            Transport.send(message);
-
-	            
-
-	        } catch (MessagingException e) {
-	            e.printStackTrace();
-	        }
-	        System.out.println("bien envoyer");
-		
+	@Override
+	public List<Commande> listCommandes() {
+		List<Commande> commands = null ;
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		commands = session.createQuery("from Commande").list();
+		session.getTransaction().commit();
+		return commands;
 	}
-*/
 
-
-	/*@Override
-	public List<Article> getArticlesCategorieByNom(String nomCateg) {
-		// TODO Auto-generated method stub
-		return null;
-	}*/
-
+	@Override
+	public List<lignecmd> getlignecmd(Long idCommande) {
+		List<lignecmd> lignes = null ;
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		lignes = session.createQuery("from lignecmd").list();
+		session.getTransaction().commit();
+		return lignes;
+	}
 }

@@ -33,4 +33,7 @@ public interface IDAO {
 	public Long addCommande(Date date, Client client);
 	public void addProduitToCommande(Long idCommande,item item);
 	
+	public List<Commande> listCommandes();
+	public List<lignecmd> getlignecmd(Long idCommande);
+	
 }

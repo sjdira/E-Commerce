@@ -7761,7 +7761,7 @@ border-top: 2px solid white;}
 
 .product-entry {
   display: block;
-  height: 100% !important; }
+  height: 50% !important; }
   .product-entry .prod-img {
     display: block; }
   .product-entry .desc {
@@ -7776,7 +7776,7 @@ border-top: 2px solid white;}
       font-family: "Rokkitt", Georgia, serif;
       font-size: 18px;
       color: #000;
-      font-weight: 400; }
+      font-weight: 300; }
 
 .block-27 ul, .block-27 ul li {
   padding: 0;

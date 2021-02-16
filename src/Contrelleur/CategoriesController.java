@@ -47,6 +47,7 @@ public class CategoriesController {
 
 	@Autowired
 	private IMiter im;
+
 	
 	
 	@RequestMapping("/filtre")
@@ -75,13 +76,11 @@ public class CategoriesController {
 		model.addAttribute("lesArticles",im.getArticlesMotCle(nom));
 		return "Article";
 	}
-	
+
 	@RequestMapping("/order-complete")
-	public void order(HttpSession session)
+	public String order(HttpSession session)
 	{
 		Client c = (Client)session.getAttribute("Client");
-		//Commande cmd = im.addCommande(new Date(),c);
-		//return "order-complete";
 		List<item> cart = (List<item>)session.getAttribute("cart");
 		//System.out.println(im.addCommande(new Date(),c));
 		Long idcmd = im.addCommande(new Date(),c);
@@ -89,6 +88,8 @@ public class CategoriesController {
 		{
 			im.addProduitToCommande(idcmd, it);
 		}
+		session.removeAttribute("cart");
+		return "order-complete";
 	}
 	
 	@RequestMapping("/")
@@ -132,8 +133,10 @@ public class CategoriesController {
 	}
 	
 	@RequestMapping("/dashboard")
-	public String dashboard()
+	public String dashboard(Model model)
 	{
+		
+		model.addAttribute("commandes",im.listCommandes());
 		return "dashboard";
 	}
 	
@@ -142,14 +145,7 @@ public class CategoriesController {
 	{
 		return "cart";
 	}
-	
-	
 
-	/*@RequestMapping("/order-complete")
-	public String order()
-	{
-		return "order-complete";
-	}*/
 
 	
 	@RequestMapping("/Addcart")
@@ -202,7 +198,6 @@ public class CategoriesController {
 			}
 		}
 		
-		//model.addAttribute("categorie",new Categorie());
 		return "checkout";
 	}
 	
@@ -237,12 +232,13 @@ public class CategoriesController {
 	
 	
 	@RequestMapping(value="/login",method = RequestMethod.POST)
-	public String detail(HttpServletRequest request)
+	public String detail(HttpServletRequest request,Model model)
 	{
 		String login = request.getParameter("login");
 		String password= request.getParameter("pass");
 		if(login.equals("admin")&&password.equals("admin123"))
 		{
+			model.addAttribute("commandes",im.listCommandes());
 			return "dashboard";
 		}
 		return "login";
@@ -303,11 +299,7 @@ public class CategoriesController {
 	@RequestMapping("/contact")
 	public String contact(HttpServletRequest request)
 	{
-		String fname = request.getParameter("fname");
-		String lname = request.getParameter("lname");
-		String email = request.getParameter("email");
-		String subject = request.getParameter("subject");
-		String message = request.getParameter("message");
+		
 		return "contact";
 	}
 	

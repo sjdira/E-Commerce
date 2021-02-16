@@ -166,7 +166,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">Les catégories</h3>
+                            <h3 class="box-title">Clients</h3>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
