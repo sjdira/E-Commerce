@@ -91,7 +91,7 @@ public class CategoriesController {
 		return "TestUser";
 	}
 	
-	@RequestMapping("/dashboard")
+	@RequestMapping("/admin")
 	public String dashboard()
 	{
 		return "dashboard";
