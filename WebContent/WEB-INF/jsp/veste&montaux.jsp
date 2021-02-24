@@ -391,6 +391,16 @@
 		<a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
 	</div>
 	
+	<script>
+		var slider = document.getElementById("myRange");
+		var output = document.getElementById("demo");
+		output.innerHTML = slider.value;
+		
+		slider.oninput = function() {
+		  output.innerHTML = this.value;
+	}
+	</script>
+	
 	<!-- jQuery -->
 	<script src="<%=request.getContextPath()%>/ressources/js/jquery.min.js"></script>
    <!-- popper -->
