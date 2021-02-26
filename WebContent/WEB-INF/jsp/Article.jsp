@@ -164,7 +164,7 @@
             <!-- ============================================================== -->
             <div class="page-breadcrumb bg-white">
                  <div class="row align-items-center">
-                    <div class="col-lg-8 center">
+                    <div class="col-lg-6 center">
                         <h4> AJOUTER UN ARTICLE : </h4>
   							<form:form action="saveArticle" modelAttribute="article" method="post" enctype="multipart/form-data">
   								<table>
@@ -237,13 +237,18 @@
   								</table> 
   							</form:form>
                     </div>
-                    
-                    <!-- <div class="col-lg-4">
-                    	<form action="chercherByNom" method="get">
-                    		<input type="text" name="nom" placeholder="enter name product" style="width:255px"> <br><br>
-                    		<input type="submit" value="search" >
+                     <div class="col-lg-6">
+                    	<form action="chercherArticleByNom" method="get">
+                    		<div class="input-group rounded">
+						  <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+						    aria-describedby="search-addon" name="Mot"/>
+						  <span class="input-group-text border-0" id="search-addon">
+						    
+						    <button class="fas fa-search"></button>
+						  </span>
+						</div>
                     	</form>
-                    </div> -->
+                    </div> 
                     
                     
                 </div>

@@ -82,7 +82,7 @@
                             <form action="filtre" method="get">
                             	
                             	<div class="slidecontainer">
-							    <input type="range" min="100" max="700" value="700" class="slider" id="myRange" name="myRange">
+							    <input type="range" min="70" max="700" value="700" class="slider" id="myRange" name="myRange">
 							    <p><span id="demo"></span></p>
 							    </div> 
 							    <input type="hidden" value="<%=request.getParameter("idCategorie") %>" name="idCategorie">

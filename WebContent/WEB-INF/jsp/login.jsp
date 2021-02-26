@@ -57,7 +57,7 @@
 					data-validate="Please enter email: ex@abc.xyz"
 					-->
 					<div class="wrap-input100 validate-input m-b-16" >
-						<input class="input100" type="text" name="login" placeholder="Email">
+						<input class="input100" type="text" name="login" placeholder="Login">
 						<span class="focus-input100"></span>
 					</div>
 
