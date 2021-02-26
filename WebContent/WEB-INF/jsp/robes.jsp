@@ -60,8 +60,8 @@
 								</li>
 								<li><a href="about">About Us</a></li>
 								<li><a href="contact">Contact Us</a></li>
-								<li class="cart"><a href="cart.jsp"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
-								<li class="cart"><a href="login.jsp"><i class="bi bi-box-arrow-right"></i> Sign In</a></li>
+								<li class="cart"><a href="cart"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
+								<li class="cart"><a href="login"><i class="bi bi-box-arrow-right"></i> Sign In</a></li>
 							</ul>
 								<!-- <input id="recherche" type="text" placeholder="Search...">
  								 <div class="search"></div> -->

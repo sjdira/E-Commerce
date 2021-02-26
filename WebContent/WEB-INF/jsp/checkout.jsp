@@ -80,7 +80,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<p class="bread"><span><a href="index.jsp">Home</a></span> / <span>Checkout</span></p>
+						<p class="bread"><span><a href="index">Home</a></span> / <span>Checkout</span></p>
 					</div>
 				</div>
 			</div>

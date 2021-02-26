@@ -51,7 +51,7 @@
 							
 							<ul>
 								<a class="navbar-brand logo" href="#">Navbar</a>
-								<li class="active"><a href="index.jsp">Home</a></li>
+								<li class="active"><a href="index">Home</a></li>
 								<li class="has-dropdown">
 									<a href="shop">Shop</a>
 								</li>
@@ -174,7 +174,7 @@
 									<br>
 									<div class="row">
 										<div class="col-md-12 text-center">
-											<p><a href="checkout.jsp" class="btn btn-primary">Buy Now</a></p>
+											<p><a href="checkout" class="btn btn-primary">Buy Now</a></p>
 										</div>
 									</div>
 								</div>
@@ -193,13 +193,13 @@
 			<h3>Elegan<span>cia</span></h3>
 	 
 			<p class="footer-links">
-			<a href="index.jsp">Home</a>
+			<a href="index">Home</a>
 		
-			<a href="shop.jsp">Shop</a>
+			<a href="shop">Shop</a>
 		
-			<a href="about.jsp">About</a>
+			<a href="about">About</a>
 		
-			<a href="contact.jsp">Contact</a>
+			<a href="contact">Contact</a>
 			</p>
 	 
 			<p class="footer-company-name">Elegancia &copy; 2021</p>
