@@ -49,6 +49,14 @@ public class CategoriesController {
 	private IMiter im;
 
 	
+	@RequestMapping(value="/chercherArticleByNom",method = RequestMethod.GET)
+	public String chercherArticleByNom(Model model,String Mot)
+	{
+		model.addAttribute("article",new Article());
+		model.addAttribute("lesArticles",im.getArticlesMotCle(Mot));
+		return "Article";
+	}
+	
 	
 	@RequestMapping("/filtre")
 	public String filtre(Model model,Double myRange,Long idCategorie)
@@ -70,12 +78,7 @@ public class CategoriesController {
 		model.addAttribute("Clients",im.getClients());
 		return "client";
 	}
-	@RequestMapping("/chercherByNom")
-	public String chercherByNom(String nom , Model model)
-	{
-		model.addAttribute("lesArticles",im.getArticlesMotCle(nom));
-		return "Article";
-	}
+	
 
 	@RequestMapping("/order-complete")
 	public String order(HttpSession session)
@@ -131,10 +134,6 @@ public class CategoriesController {
 		}
 		return "TestUser";
 	}
-	
-
-	
-	
 	@RequestMapping("/dashboard")
 	public String dashboard(Model model)
 	{

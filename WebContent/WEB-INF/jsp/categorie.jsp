@@ -165,7 +165,7 @@
             <!-- ============================================================== -->
             <div class="page-breadcrumb bg-white">
                  <div class="row align-items-center">
-                    <div >
+                    <div class="col col-lg-12" >
                         <h4>AJOUTER UNE CATEGORIE : </h4>
   							<form:form action="save" modelAttribute="categorie" method="post" enctype="multipart/form-data">
   								<table>
@@ -202,6 +202,7 @@
   								</table> 
   							</form:form>
                     </div>
+                    
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
