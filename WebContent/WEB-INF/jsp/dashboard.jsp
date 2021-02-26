@@ -199,8 +199,8 @@
                                      <c:forEach items="${commandes}" var="commande">
                                         <tr>
                                             <td align="center" valign="center">${commande.getIdCommande()}</td>
-                                            <td align="center" valign="center">${commande.getIdCommande()}</td>
-                                            <td align="center" valign="center">${commande.getIdCommande()}</td>
+                                            <td align="center" valign="center">${commande.getDateCommande()}</td>
+                                            <td align="center" valign="center">${commande.getClient().getIdClient()}</td>
                                         </tr>
                                       </c:forEach>
                                     </tbody>
